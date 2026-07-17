@@ -18,6 +18,8 @@ const CARD_COLLAPSE_JITTER = Array.from({ length: 6 }, () => ({
   rotate: (Math.random() - 0.5) * 20,
 }));
 
+const BASE = import.meta.env.BASE_URL;
+
 const cardsData = [
   {
     id: 'github',
@@ -28,7 +30,7 @@ const cardsData = [
     serial: 'CODE-001',
     themeColor: 'neon-cyan',
     bgPattern: 'bg-halftone-white',
-    avatarImg: '/github.jpg',
+    avatarImg: `${BASE}github.jpg`,
     link: 'https://github.com/Saras-Kashyap',
     quote: 'SHADOW CLONE REPO ACTIVE!'
   },
@@ -41,7 +43,7 @@ const cardsData = [
     serial: 'PROF-002',
     themeColor: 'neon-pink',
     bgPattern: 'bg-speedlines',
-    avatarImg: '/linkedin.jpg',
+    avatarImg: `${BASE}linkedin.jpg`,
     link: 'https://www.linkedin.com/in/saras-kashyap-62a0bb326?utm_source=share_via&utm_content=profile&utm_medium=member_android',
     quote: 'MAX LEVEL NETWORKING!'
   },
@@ -54,7 +56,7 @@ const cardsData = [
     serial: 'CODE-004',
     themeColor: 'neon-yellow',
     bgPattern: 'speedlines-diagonal',
-    avatarImg: '/leetcode.jpg',
+    avatarImg: `${BASE}leetcode.jpg`,
     link: 'https://leetcode.com/u/Saras_kashyap/',
     quote: 'LIMIT BREAK ALGORITHMS!'
   },
@@ -67,7 +69,7 @@ const cardsData = [
     serial: 'POST-003',
     themeColor: 'neon-yellow',
     bgPattern: 'speedlines-diagonal',
-    avatarImg: '/x.jpg',
+    avatarImg: `${BASE}x.jpg`,
     link: 'https://x.com/Saras', // TODO: Replace with your real X.com profile URL
     quote: 'LIMIT BREAK THOUGHTS!'
   },
@@ -80,7 +82,7 @@ const cardsData = [
     serial: 'VID-005',
     themeColor: 'neon-pink',
     bgPattern: 'bg-speedlines',
-    avatarImg: '/youtube.jpg',
+    avatarImg: `${BASE}youtube.jpg`,
     link: 'https://youtube.com/@Saras', // TODO: Replace with your real YouTube channel URL
     quote: 'SUBSCRIBE FOR CLIPS!'
   },
@@ -93,7 +95,7 @@ const cardsData = [
     serial: 'COMM-006',
     themeColor: 'neon-yellow',
     bgPattern: 'speedlines-diagonal',
-    avatarImg: '/reddit.jpg',
+    avatarImg: `${BASE}reddit.jpg`,
     link: 'https://reddit.com/u/Saras', // TODO: Replace with your real Reddit profile URL
     quote: 'UPVOTE THE SHINOBI WAY!'
   }
@@ -344,7 +346,7 @@ export default function App() {
                   <div className={`w-12 h-12 border-3 border-black rounded-none overflow-hidden flex-shrink-0 flex items-center justify-center ${
                     mangaTheme === 'domain' ? 'bg-neon-purple' : 'bg-neon-pink'
                   }`}>
-                    <img src="/me.jpg" alt="Saras Kumar" className="w-full h-full object-cover" />
+                    <img src={`${BASE}me.jpg`} alt="Saras Kumar" className="w-full h-full object-cover" />
                   </div>
                   <div>
                     <h4
@@ -444,7 +446,7 @@ export default function App() {
                   {/* Resume Download CTA */}
                   <div className="pt-3 border-t-2 border-black/20">
                     <a
-                      href="/Saras_Kumar_Golu_Resume.docx"
+                      href={`${BASE}Saras_Kumar_Golu_Resume.docx`}
                       download
                       className={`
                         flex items-center justify-center gap-2 w-full py-2 border-[3px] border-black
